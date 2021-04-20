@@ -1,0 +1,81 @@
+.write-wrapper {
+    width: 820px;
+    height: 700px;
+    margin: 40px auto;
+}
+
+table {
+
+    border-radius: 4px;
+    background-color: white;
+    width: 800px;
+    margin: 0 auto;
+    border-spacing: 20px 20px;
+    border-collapse: separate;
+
+}
+
+tr {
+    height: 30px;
+
+}
+
+td {
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.col-name {
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 10px;
+    width: 30%;
+    color: white;
+    /* background-color: lightblue; */
+    background-color: #0E0c32;
+}
+
+.tr-last {
+    text-align: center;
+}
+
+.input-1 {
+    width: 95%;
+}
+
+textarea {
+    min-width: 92%;
+    min-height: 180px;
+    padding: 12px 12px;
+}
+
+
+.login-button {
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #0E0c32;
+    color: white;
+    border: 0px;
+}
+
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+.login-button:focus {
+    border: none;
+    outline: none;
+}
+
+.login-button:nth-child(even) {
+    background-color: white;
+    color: rgb(216, 76, 76);
+    border: 1px solid rgb(216, 76, 76);
+}
+

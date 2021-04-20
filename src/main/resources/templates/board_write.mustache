@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBank :: 案件登録</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/write.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Script -->
+</head>
+<body>
+
+<div class="write-wrapper">
+    <form action="" name="write-frm">
+        <table>
+            <tr>
+                <td class="col-name">案件名</td>
+                <td>
+                    <input class="input-1"  name="subject" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">契約期間</td>
+                <td>
+                    <input class="input-1"  name="date" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">勤務地</td>
+                <td>
+                    <input class="input-1"  name="loc" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">月額単位</td>
+                <td>
+                    <input class="input-1"  name="commision" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">必要スキル</td>
+                <td>
+                    <input class="input-1"  name="skill" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">カテゴリー</td>
+                <td>
+                    <input class="input-1"  name="category" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">面談回数</td>
+                <td>
+                    <input class="input-1"  name="consultcnt" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">その他</td>
+                <td>
+                    <textarea></textarea>
+                </td>
+            </tr>
+            <tr class="tr-last">
+                <td colspan="2">
+                    <button class="login-button" onclick="write_send()" type="button">登録</button>
+                    <button class="login-button" onclick="cancle()" type="button">削除</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+</div>
+
+<script type="text/javascript" src="script/write.js">
+
+
+</script>
+</body>
+</html>
