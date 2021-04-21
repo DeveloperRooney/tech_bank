@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+
+    <title>TechBank :: Login</title>
+</head>
+
+<body>
+<form action="" method="post" name="login_form">
+    <div class="login-wrapper">
+        <div class="top">ログイン</div>
+        <div class="login-area">
+            <div class="login-section">
+                <span>ID</span><input class="login-input" type="text" name="userid" autocomplete="off">
+            </div>
+            <div class="login-section">
+                <span>PASSWORD</span><input class="login-input" type="password" name="passwd" autocomplete="off">
+            </div>
+            <div class="login-button">
+                <button type="button" onclick="login()">ログイン</button>
+                <button type="button" onclick="cancle()">キャンセル</button>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- Script -->
+<script type="text/javascript" src="script/login.js">
+</script>
+</body>
+</html>
