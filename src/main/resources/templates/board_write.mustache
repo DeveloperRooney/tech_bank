@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechBank :: 案件登録</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
@@ -16,11 +15,12 @@
 
 
     <!-- Script -->
+    <title>TechBank :: 案件登録</title>
 </head>
 <body>
 
 <div class="write-wrapper">
-    <form action="" name="write-frm">
+    <form action="/write_pro.do" name="write_frm" method="post">
         <table>
             <tr>
                 <td class="col-name">案件名</td>
@@ -31,7 +31,7 @@
             <tr>
                 <td class="col-name">契約期間</td>
                 <td>
-                    <input class="input-1"  name="date" type="text">
+                    <input class="input-1"  name="term" type="text">
                 </td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@
             <tr>
                 <td class="col-name">月額単位</td>
                 <td>
-                    <input class="input-1"  name="commision" type="text">
+                    <input class="input-1"  name="monthlv" type="text">
                 </td>
             </tr>
             <tr>
@@ -67,13 +67,13 @@
             <tr>
                 <td class="col-name">その他</td>
                 <td>
-                    <textarea></textarea>
+                    <textarea name="etc"></textarea>
                 </td>
             </tr>
             <tr class="tr-last">
                 <td colspan="2">
-                    <button class="login-button" onclick="write_send()" type="button">登録</button>
-                    <button class="login-button" onclick="cancle()" type="button">削除</button>
+                    <button type="button" class="login-button" onclick="write_send()">登録</button>
+                    <button type="button" class="login-button" onclick="cancle()">削除</button>
                 </td>
             </tr>
         </table>
