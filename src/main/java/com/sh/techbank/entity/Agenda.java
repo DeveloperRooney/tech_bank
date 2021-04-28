@@ -58,4 +58,21 @@ public class Agenda {
         this.agendaInterviewNumber = agendaInterviewNumber;
         this.agendaEtc = agendaEtc;
     }
+
+    @Override
+    public String toString() {
+        return "Agenda{" +
+                "agendaNumber=" + agendaNumber +
+                ", agendaName='" + agendaName + '\'' +
+                ", agendaPlace='" + agendaPlace + '\'' +
+                ", agendaStartDate='" + agendaStartDate + '\'' +
+                ", agendaEndDate='" + agendaEndDate + '\'' +
+                ", agendaMinPay=" + agendaMinPay +
+                ", agendaMaxPay=" + agendaMaxPay +
+                ", agendaSkill='" + agendaSkill + '\'' +
+                ", agendaCategory='" + agendaCategory + '\'' +
+                ", agendaInterviewNumber=" + agendaInterviewNumber +
+                ", agendaEtc='" + agendaEtc + '\'' +
+                '}';
+    }
 }

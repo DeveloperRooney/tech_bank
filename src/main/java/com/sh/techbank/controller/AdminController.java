@@ -64,10 +64,13 @@ public class AdminController {
 
         System.out.println(agendaForm.toString());
 
+
+        // VO를 Entity로 변환
         Agenda agenda = agendaForm.toEntity();
+        System.out.println(agenda.toString());
 
+        // Repository를 이용하여 Entity를 DB에 저장
         Agenda saved = agendaRepository.save(agenda);
-
         System.out.println(saved.toString());
 
         return "";
