@@ -11,8 +11,8 @@ public class AgendaForm {
     private String agendaPlace;
     private String agendaStartDate;
     private String agendaEndDate;
-    private int MinPay;
-    private int MaxPay;
+    private int agendaMinPay;
+    private int agendaMaxPay;
     private String agendaSkill;
     private String agendaCategory;
     private int agendaInterviewNumber;
@@ -58,20 +58,18 @@ public class AgendaForm {
         this.agendaEndDate = agendaEndDate;
     }
 
-    public int getMinPay() {
-        return MinPay;
+    public int getAgendaMinPay() { return agendaMinPay; }
+
+    public void setAgendaMinPay(int minPay) {
+        agendaMinPay = minPay;
     }
 
-    public void setMinPay(int minPay) {
-        MinPay = minPay;
+    public int getAgendaMaxPay() {
+        return agendaMaxPay;
     }
 
-    public int getMaxPay() {
-        return MaxPay;
-    }
-
-    public void setMaxPay(int maxPay) {
-        MaxPay = maxPay;
+    public void setAgendaMaxPay(int maxPay) {
+        agendaMaxPay = maxPay;
     }
 
     public String getAgendaSkill() {
@@ -114,8 +112,8 @@ public class AgendaForm {
                 ", agendaPlace='" + agendaPlace + '\'' +
                 ", agendaStartDate='" + agendaStartDate + '\'' +
                 ", agendaEndDate='" + agendaEndDate + '\'' +
-                ", MinPay=" + MinPay +
-                ", MaxPay=" + MaxPay +
+                ", agendaMinPay=" + agendaMinPay +
+                ", agendaMaxPay=" + agendaMaxPay +
                 ", agendaSkill='" + agendaSkill + '\'' +
                 ", agendaCategory='" + agendaCategory + '\'' +
                 ", agendaInterviewNumber=" + agendaInterviewNumber +
@@ -124,7 +122,7 @@ public class AgendaForm {
     }
 
     public Agenda toEntity() {
-        return new Agenda(agendaNumber, agendaName, agendaPlace, agendaStartDate, agendaEndDate, MinPay, MaxPay, agendaSkill,
+        return new Agenda(agendaNumber, agendaName, agendaPlace, agendaStartDate, agendaEndDate, agendaMinPay, agendaMaxPay, agendaSkill,
                 agendaCategory, agendaInterviewNumber, agendaEtc);
     }
 }

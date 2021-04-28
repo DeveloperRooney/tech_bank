@@ -7,37 +7,47 @@ function cancle() {
 }
 
 function write_send() {
-    if (write_frm.subject.value == '') {
+    if (write_frm.agendaName.value == '') {
         alert("案件名を入力してください。")
-        write_frm.subject.focus()
+        write_frm.agendaName.focus()
         return
-    }else if (write_frm.term.value == '') {
+    }else if (write_frm.agendaStartDate.value == '') {
         alert("契約期間を入力してください。")
-        write_frm.term.focus()
+        write_frm.agendaStartDate.focus()
         return
-    }else if (write_frm.loc.value == '') {
+    }else if (write_frm.agendaEndDate.value == '') {
+        alert("契約期間を入力してください。")
+        write_frm.agendaEndDate.focus()
+        return
+    }
+    else if (write_frm.agendaPlace.value == '') {
         alert("勤務地を入力してください。")
-        write_frm.loc.focus()
+        write_frm.agendaPlace.focus()
         return
-    }else if (write_frm.monthlv.value == '') {
+    }else if (write_frm.agendaMinPay.value == '') {
         alert("月額単位を入力してください。")
-        write_frm.monthlv.focus()
+        write_frm.agendaMinPay.focus()
         return
-    }else if (write_frm.category.value == '') {
+    }else if (write_frm.agendaMaxPay.value == '') {
+        alert("月額単位を入力してください。")
+        write_frm.agendaMaxPay.focus()
+        return
+    }
+    else if (write_frm.agendaCategory.value == '') {
         alert("カテゴリーを入力してください。")
-        write_frm.category.focus()
+        write_frm.agendaCategory.focus()
         return
-    }else if (write_frm.skill.value == '') {
+    }else if (write_frm.agendaSkill.value == '') {
         alert("必要スキルを入力してください。")
-        write_frm.skill.focus()
+        write_frm.agendaSkill.focus()
         return
-    }else if (write_frm.consultcnt.value == '') {
+    }else if (write_frm.agendaInterviewNumber.value == '') {
         alert("面談回数を入力してください。")
-        write_frm.consultcnt.focus()
+        write_frm.agendaInterviewNumber.focus()
         return
-    }else if (write_frm.etc.value == '') {
+    }else if (write_frm.agendaEtc.value == '') {
         alert("その他のところを入力してください。")
-        write_frm.etc.focus()
+        write_frm.agendaEtc.focus()
         return
     }
 

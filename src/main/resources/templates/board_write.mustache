@@ -20,7 +20,7 @@
 <body>
 
 <div class="write-wrapper">
-    <form action="/write_pro.do" name="write_frm" method="post">
+    <form action="/board.pro" name="write_frm" method="post">
         <table>
             <tr>
                 <td class="col-name">案件名</td>
@@ -31,44 +31,45 @@
             <tr>
                 <td class="col-name">契約期間</td>
                 <td>
-                    <input class="input-1"  name="agenda" type="text">
-                    <input class="input-1"  name="term" type="text">
+                    <input class="input-1"  name="agendaStartDate" type="text">
+                    <input class="input-1"  name="agendaEndDate" type="text">
                 </td>
             </tr>
             <tr>
                 <td class="col-name">勤務地</td>
                 <td>
-                    <input class="input-1"  name="loc" type="text">
+                    <input class="input-1"  name="agendaPlace" type="text">
                 </td>
             </tr>
             <tr>
                 <td class="col-name">月額単位</td>
                 <td>
-                    <input class="input-1"  name="monthlv" type="text">
+                    <input class="input-1"  name="agendaMinPay" type="text">
+                    <input class="input-1"  name="agendaMaxPay" type="text">
                 </td>
             </tr>
             <tr>
                 <td class="col-name">必要スキル</td>
                 <td>
-                    <input class="input-1"  name="skill" type="text">
+                    <input class="input-1"  name="agendaSkill" type="text">
                 </td>
             </tr>
             <tr>
                 <td class="col-name">カテゴリー</td>
                 <td>
-                    <input class="input-1"  name="category" type="text">
+                    <input class="input-1"  name="agendaCategory" type="text">
                 </td>
             </tr>
             <tr>
                 <td class="col-name">面談回数</td>
                 <td>
-                    <input class="input-1"  name="consultcnt" type="text">
+                    <input class="input-1"  name="agendaInterviewNumber" type="text">
                 </td>
             </tr>
             <tr>
                 <td class="col-name">その他</td>
                 <td>
-                    <textarea name="etc"></textarea>
+                    <textarea name="agendaEtc"></textarea>
                 </td>
             </tr>
             <tr class="tr-last">
