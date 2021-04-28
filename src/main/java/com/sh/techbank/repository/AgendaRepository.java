@@ -1,4 +1,7 @@
 package com.sh.techbank.repository;
 
-public interface AgendaRepository {
+import com.sh.techbank.entity.Agenda;
+import org.springframework.data.repository.CrudRepository;
+
+public interface AgendaRepository extends CrudRepository<Agenda, Integer> {
 }

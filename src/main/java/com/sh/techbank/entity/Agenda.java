@@ -1,10 +1,9 @@
 package com.sh.techbank.entity;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+
+@Entity
 public class Agenda {
 
     @Id
@@ -24,10 +23,10 @@ public class Agenda {
     private String agendaEndDate;
 
     @Column
-    private int MinPay;
+    private int agendaMinPay;
 
     @Column
-    private int MaxPay;
+    private int agendaMaxPay;
 
     @Column
     private String agendaSkill;
@@ -44,16 +43,16 @@ public class Agenda {
     public Agenda() {}
 
     public Agenda(int agendaNumber, String agendaName, String agendaPlace,
-                  String agendaStartDate, String agendaEndDate, int minPay,
-                  int maxPay, String agendaSkill, String agendaCategory,
+                  String agendaStartDate, String agendaEndDate, int agendaMinPay,
+                  int agendaMaxPay, String agendaSkill, String agendaCategory,
                   int agendaInterviewNumber, String agendaEtc) {
         this.agendaNumber = agendaNumber;
         this.agendaName = agendaName;
         this.agendaPlace = agendaPlace;
         this.agendaStartDate = agendaStartDate;
         this.agendaEndDate = agendaEndDate;
-        MinPay = minPay;
-        MaxPay = maxPay;
+        this.agendaMinPay = agendaMinPay;
+        this.agendaMaxPay = agendaMaxPay;
         this.agendaSkill = agendaSkill;
         this.agendaCategory = agendaCategory;
         this.agendaInterviewNumber = agendaInterviewNumber;
