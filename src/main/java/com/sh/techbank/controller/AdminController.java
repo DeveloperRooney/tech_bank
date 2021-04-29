@@ -62,16 +62,16 @@ public class AdminController {
     @PostMapping("/board.pro")
     public String agendaInsert(AgendaForm agendaForm) {
 
-        System.out.println(agendaForm.toString());
+        System.out.println("들어온 데이터 : " + agendaForm.toString());
 
 
         // VO를 Entity로 변환
         Agenda agenda = agendaForm.toEntity();
-        System.out.println(agenda.toString());
+        System.out.println("Entity : " + agenda.toString());
 
         // Repository를 이용하여 Entity를 DB에 저장
         Agenda saved = agendaRepository.save(agenda);
-        System.out.println(saved.toString());
+        System.out.println("DB저장 : " + saved.toString());
 
         return "";
     }
