@@ -3,7 +3,9 @@ package com.sh.techbank.controller;
 
 import com.sh.techbank.domain.AgendaForm;
 import com.sh.techbank.entity.Agenda;
+import com.sh.techbank.entity.Member;
 import com.sh.techbank.repository.AgendaRepository;
+import com.sh.techbank.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
+import java.util.Optional;
 
 @Controller
 public class AdminController {
@@ -22,6 +25,9 @@ public class AdminController {
 
     @Autowired
     private AgendaRepository agendaRepository;
+
+    @Autowired
+    private MemberRepository memberRepository;
 
     public String adminMain() {
 
@@ -38,10 +44,7 @@ public class AdminController {
     @PostMapping("/login.pro")
     public String adminLogin(String userid, String passwd, HttpSession session, RedirectAttributes redirectAttributes){
 
-        System.out.println(userid);
-        System.out.println(passwd);
-
-        session.setAttribute("admin", "admin");
+        Member member = memberRepository.findById(userid);
 
         return "";
     }
