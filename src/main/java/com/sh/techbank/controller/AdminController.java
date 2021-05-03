@@ -44,9 +44,32 @@ public class AdminController {
     @PostMapping("/login.pro")
     public String adminLogin(String userid, String passwd, HttpSession session, RedirectAttributes redirectAttributes){
 
-        Member member = memberRepository.findById(userid);
+        System.out.println("입력받은 아이디 : " + userid);
 
-        return "";
+        System.out.println("입력받은 비밀번호 : " + passwd);
+
+        Member user = memberRepository.findByUserid(userid);
+
+        System.out.println("DB에 저장된 비밀번호 : " + user.getUserpwd());
+
+        System.out.println(user);
+
+        String username = user.getUsername();
+
+        if (user == null) {
+            System.out.println("존재하지 않는 아이디");
+            redirectAttributes.addAttribute("idnoexist", true);
+        }else {
+            if (user.getUserpwd().equals(passwd)) {
+                System.out.println("로그인 실행");
+                session.setAttribute("user", username);
+            }else {
+                System.out.println("비밀번호 불일치 실행");
+                redirectAttributes.addAttribute("passfail", true);
+            }
+        }
+
+        return "login_check";
     }
 
     public String adminLogout() {

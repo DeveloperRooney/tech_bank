@@ -28,4 +28,30 @@ public class Member {
         this.role = role;
     }
 
+    @Override
+    public String toString() {
+        return "Member{" +
+                "userid='" + userid + '\'' +
+                ", userpwd='" + userpwd + '\'' +
+                ", username='" + username + '\'' +
+                ", role=" + role +
+                '}';
+    }
+
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public String getUserpwd() {
+        return userpwd;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public int getRole() {
+        return role;
+    }
 }
