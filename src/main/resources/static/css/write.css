@@ -79,3 +79,7 @@ textarea {
     border: 1px solid rgb(216, 76, 76);
 }
 
+.data-input {
+    display: inline-block;
+    width: 235px;
+}
