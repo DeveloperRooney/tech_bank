@@ -50,11 +50,11 @@ public class AdminController {
 
         Member user = memberRepository.findByUserid(userid);
 
-        System.out.println("DB에 저장된 비밀번호 : " + user.getUserpwd());
+        if (user != null) {
+            System.out.println("DB에 저장된 비밀번호 : " + user.getUserpwd());
 
-        System.out.println(user);
-
-        String username = user.getUsername();
+            System.out.println(user);
+        }
 
         if (user == null) {
             System.out.println("존재하지 않는 아이디");
@@ -62,7 +62,7 @@ public class AdminController {
         }else {
             if (user.getUserpwd().equals(passwd)) {
                 System.out.println("로그인 실행");
-                session.setAttribute("user", username);
+                session.setAttribute("user", user);
             }else {
                 System.out.println("비밀번호 불일치 실행");
                 redirectAttributes.addAttribute("passfail", true);
