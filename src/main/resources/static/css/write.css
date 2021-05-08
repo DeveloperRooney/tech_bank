@@ -83,3 +83,8 @@ textarea {
     display: inline-block;
     width: 235px;
 }
+
+.pay-input {
+    display: inline-block;
+    width: 130px;
+}
